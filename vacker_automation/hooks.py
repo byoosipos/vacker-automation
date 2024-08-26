@@ -215,7 +215,10 @@ app_license = "mit"
 
 # Authentication and authorization
 # --------------------------------
-
+fixtures = [
+    {"dt": "Client Script", "filters": [["module", "=", "Vacker Automation"]]},
+    {"dt": "Custom Field", "filters": [["module", "=", "Vacker Automation"]]}
+]
 # auth_hooks = [
 # 	"vacker_automation.auth.validate"
 # ]

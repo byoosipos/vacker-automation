@@ -1,0 +1,40 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-26 15:52:24.431164",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account",
+  "percet"
+ ],
+ "fields": [
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Account",
+   "link_filters": "[[\"Account\",\"parent_account\",\"=\",\"1500 - Tax Assets - VCL\"]]",
+   "options": "Account"
+  },
+  {
+   "fieldname": "percet",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Percet"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-08-26 16:01:42.815310",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Customer Claimable Tax",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
