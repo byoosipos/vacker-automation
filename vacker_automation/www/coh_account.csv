@@ -1,0 +1,61 @@
+"Column Labels:","ID","Account Name","Company","Parent Account","Created On","Created By","Disable","Account Number","Is Group","Root Type","Report Type","Currency","Account Type","Tax Rate","Frozen","Balance must be","Include in gross"
+
+// 1000-1999 ASSETS
+"","""1000 - Assets - VCL""","Assets","Vacker Company Limited","",,"Administrator",0,"1000",1,"Asset","Balance Sheet","UGX","",0.0,"No","",0
+
+// 1100 Current Assets
+"","""1100 - Current Assets - VCL""","Current Assets","Vacker Company Limited","1000 - Assets - VCL",,"Administrator",0,"1100",1,"Asset","Balance Sheet","UGX","",0.0,"No","",0
+
+// 1110 Cash and Bank
+"","""1110 - Cash and Bank - VCL""","Cash and Bank","Vacker Company Limited","1100 - Current Assets - VCL",,"Administrator",0,"1110",1,"Asset","Balance Sheet","UGX","",0.0,"No","",0
+"","""1111 - Petty Cash - VCL""","Petty Cash","Vacker Company Limited","1110 - Cash and Bank - VCL",,"Administrator",0,"1111",0,"Asset","Balance Sheet","UGX","Cash",0.0,"No","",0
+"","""1112 - Project Cash - VCL""","Project Cash","Vacker Company Limited","1110 - Cash and Bank - VCL",,"Administrator",0,"1112",0,"Asset","Balance Sheet","UGX","Cash",0.0,"No","",0
+"","""1113 - Advance Project Cash - VCL""","Advance Project Cash","Vacker Company Limited","1110 - Cash and Bank - VCL",,"Administrator",0,"1113",0,"Asset","Balance Sheet","UGX","Cash",0.0,"No","",0
+"","""1114 - Cash USD - VCL""","Cash USD","Vacker Company Limited","1110 - Cash and Bank - VCL",,"Administrator",0,"1114",0,"Asset","Balance Sheet","USD","Cash",0.0,"No","",0
+
+// 1120 Bank Accounts
+"","""1120 - Bank Accounts - VCL""","Bank Accounts","Vacker Company Limited","1100 - Current Assets - VCL",,"Administrator",0,"1120",1,"Asset","Balance Sheet","UGX","",0.0,"No","",0
+"","""1121 - DFCU Bank - VCL""","DFCU Bank","Vacker Company Limited","1120 - Bank Accounts - VCL",,"Administrator",0,"1121",0,"Asset","Balance Sheet","UGX","Bank",0.0,"No","",0
+"","""1122 - Stanbic Collections - VCL""","Stanbic Collections","Vacker Company Limited","1120 - Bank Accounts - VCL",,"Administrator",0,"1122",0,"Asset","Balance Sheet","UGX","Bank",0.0,"No","",0
+"","""1123 - Stanbic Operations - VCL""","Stanbic Operations","Vacker Company Limited","1120 - Bank Accounts - VCL",,"Administrator",0,"1123",0,"Asset","Balance Sheet","UGX","Bank",0.0,"No","",0
+"","""1124 - Stanbic Salary - VCL""","Stanbic Salary","Vacker Company Limited","1120 - Bank Accounts - VCL",,"Administrator",0,"1124",0,"Asset","Balance Sheet","UGX","Bank",0.0,"No","",0
+"","""1125 - ABSA Bank - VCL""","ABSA Bank","Vacker Company Limited","1120 - Bank Accounts - VCL",,"Administrator",0,"1125",0,"Asset","Balance Sheet","UGX","Bank",0.0,"No","",0
+
+// 1200 Receivables
+"","""1200 - Receivables - VCL""","Receivables","Vacker Company Limited","1100 - Current Assets - VCL",,"Administrator",0,"1200",1,"Asset","Balance Sheet","UGX","",0.0,"No","",0
+"","""1210 - Trade Debtors - VCL""","Trade Debtors","Vacker Company Limited","1200 - Receivables - VCL",,"Administrator",0,"1210",0,"Asset","Balance Sheet","UGX","Receivable",0.0,"No","",0
+"","""1220 - Staff Advances - VCL""","Staff Advances","Vacker Company Limited","1200 - Receivables - VCL",,"Administrator",0,"1220",0,"Asset","Balance Sheet","UGX","Receivable",0.0,"No","",0
+"","""1230 - VAT Receivable - VCL""","VAT Receivable","Vacker Company Limited","1200 - Receivables - VCL",,"Administrator",0,"1230",0,"Asset","Balance Sheet","UGX","Tax",0.0,"No","",0
+"","""1240 - WHT Receivable - VCL""","WHT Receivable","Vacker Company Limited","1200 - Receivables - VCL",,"Administrator",0,"1240",0,"Asset","Balance Sheet","UGX","Tax",0.0,"No","",0
+
+// 1300 Inventory
+"","""1300 - Inventory - VCL""","Inventory","Vacker Company Limited","1100 - Current Assets - VCL",,"Administrator",0,"1300",1,"Asset","Balance Sheet","UGX","",0.0,"No","",0
+"","""1310 - Raw Materials - VCL""","Raw Materials","Vacker Company Limited","1300 - Inventory - VCL",,"Administrator",0,"1310",0,"Asset","Balance Sheet","UGX","Stock",0.0,"No","",0
+"","""1320 - Work in Progress - VCL""","Work in Progress","Vacker Company Limited","1300 - Inventory - VCL",,"Administrator",0,"1320",0,"Asset","Balance Sheet","UGX","Stock",0.0,"No","",0
+"","""1330 - Finished Goods - VCL""","Finished Goods","Vacker Company Limited","1300 - Inventory - VCL",,"Administrator",0,"1330",0,"Asset","Balance Sheet","UGX","Stock",0.0,"No","",0
+
+// 2000-2999 LIABILITIES
+"","""2000 - Liabilities - VCL""","Liabilities","Vacker Company Limited","",,"Administrator",0,"2000",1,"Liability","Balance Sheet","UGX","",0.0,"No","",0
+
+// 2100 Current Liabilities
+"","""2100 - Current Liabilities - VCL""","Current Liabilities","Vacker Company Limited","2000 - Liabilities - VCL",,"Administrator",0,"2100",1,"Liability","Balance Sheet","UGX","",0.0,"No","",0
+"","""2110 - Trade Creditors UGX - VCL""","Trade Creditors UGX","Vacker Company Limited","2100 - Current Liabilities - VCL",,"Administrator",0,"2110",0,"Liability","Balance Sheet","UGX","Payable",0.0,"No","",0
+"","""2120 - Trade Creditors USD - VCL""","Trade Creditors USD","Vacker Company Limited","2100 - Current Liabilities - VCL",,"Administrator",0,"2120",0,"Liability","Balance Sheet","USD","Payable",0.0,"No","",0
+"","""2130 - Employee Payables - VCL""","Employee Payables","Vacker Company Limited","2100 - Current Liabilities - VCL",,"Administrator",0,"2130",0,"Liability","Balance Sheet","UGX","Payable",0.0,"No","",0
+
+// 2200 Tax Payables
+"","""2200 - Tax Payables - VCL""","Tax Payables","Vacker Company Limited","2000 - Liabilities - VCL",,"Administrator",0,"2200",1,"Liability","Balance Sheet","UGX","",0.0,"No","",0
+"","""2210 - VAT Payable - VCL""","VAT Payable","Vacker Company Limited","2200 - Tax Payables - VCL",,"Administrator",0,"2210",0,"Liability","Balance Sheet","UGX","Tax",0.0,"No","",0
+"","""2220 - WHT Payable - VCL""","WHT Payable","Vacker Company Limited","2200 - Tax Payables - VCL",,"Administrator",0,"2220",0,"Liability","Balance Sheet","UGX","Tax",0.0,"No","",0
+"","""2230 - PAYE Payable - VCL""","PAYE Payable","Vacker Company Limited","2200 - Tax Payables - VCL",,"Administrator",0,"2230",0,"Liability","Balance Sheet","UGX","Tax",0.0,"No","",0
+"","""2240 - NSSF Payable - VCL""","NSSF Payable","Vacker Company Limited","2200 - Tax Payables - VCL",,"Administrator",0,"2240",0,"Liability","Balance Sheet","UGX","Tax",0.0,"No","",0
+"","""2250 - Local Service Tax - VCL""","Local Service Tax","Vacker Company Limited","2200 - Tax Payables - VCL",,"Administrator",0,"2250",0,"Liability","Balance Sheet","UGX","Tax",0.0,"No","",0
+
+// Continue with similar structure for:
+// 3000 EQUITY
+// 4000 REVENUE
+// 5000 COST OF SALES
+// 6000 OPERATING EXPENSES
+// 7000 OTHER EXPENSES
+
+// Would you like me to continue with the remaining sections?

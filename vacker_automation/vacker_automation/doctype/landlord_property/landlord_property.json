@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-18 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "property",
+  "property_address",
+  "media_type",
+  "contract_start_date",
+  "contract_end_date",
+  "lease_agreement_number",
+  "rental_amount",
+  "rental_percentage",
+  "payment_frequency",
+  "status",
+  "escalation_clause",
+  "escalation_percentage",
+  "escalation_frequency",
+  "escalated_rental_amount",
+  "rental_area",
+  "rental_area_unit"
+ ],
+ "fields": [
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property_address",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Property Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "media_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Media Type",
+   "options": "Billboard\nDigital Display\nTransit Advertisement\nStreet Furniture\nOther"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Contract Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Contract End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lease_agreement_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Lease Agreement Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "rental_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rental Amount",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "default": "100",
+   "fieldname": "rental_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Rental Percentage",
+   "description": "Percentage of property being rented (100% = full property)"
+  },
+  {
+   "fieldname": "payment_frequency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Frequency",
+   "options": "Monthly\nQuarterly\nAnnually"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive\nExpired\nTerminated"
+  },
+  {
+   "fieldname": "escalation_clause",
+   "fieldtype": "Text",
+   "label": "Escalation Clause",
+   "description": "e.g., 5% annually, 3% monthly"
+  },
+  {
+   "fieldname": "escalation_percentage",
+   "fieldtype": "Percent",
+   "label": "Escalation Percentage",
+   "read_only": 1
+  },
+  {
+   "fieldname": "escalation_frequency",
+   "fieldtype": "Select",
+   "label": "Escalation Frequency",
+   "options": "Monthly\nAnnually",
+   "read_only": 1
+  },
+  {
+   "fieldname": "escalated_rental_amount",
+   "fieldtype": "Currency",
+   "label": "Escalated Rental Amount",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rental_area",
+   "fieldtype": "Float",
+   "label": "Rental Area",
+   "description": "Area being rented (in square units)"
+  },
+  {
+   "fieldname": "rental_area_unit",
+   "fieldtype": "Select",
+   "label": "Area Unit",
+   "options": "sq ft\nsq m\nacres\nhectares"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-18 01:43:33.733991",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Landlord Property",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
+}

@@ -1,0 +1,180 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "MAINT-.YYYY.-.#####",
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "media_installation",
+  "landlord",
+  "property",
+  "scheduled_date",
+  "maintenance_type",
+  "status",
+  "completed_date",
+  "assigned_technician",
+  "technician_name",
+  "estimated_cost",
+  "maintenance_cost",
+  "technician_notes",
+  "landlord_feedback",
+  "reschedule_reason",
+  "check_technician_availability"
+ ],
+ "fields": [
+  {
+   "fieldname": "media_installation",
+   "fieldtype": "Link",
+   "label": "Media Installation",
+   "options": "Media Installation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "landlord",
+   "fieldtype": "Link",
+   "label": "Landlord",
+   "options": "Landlord",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "label": "Scheduled Date",
+   "reqd": 1
+  },
+  {
+   "default": "Routine",
+   "fieldname": "maintenance_type",
+   "fieldtype": "Select",
+   "label": "Maintenance Type",
+   "options": "Routine\nEmergency\nRepair\nUpgrade"
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled\nOverdue"
+  },
+  {
+   "fieldname": "completed_date",
+   "fieldtype": "Date",
+   "label": "Completed Date"
+  },
+  {
+   "fieldname": "assigned_technician",
+   "fieldtype": "Link",
+   "label": "Assigned Technician",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "technician_name",
+   "fieldtype": "Data",
+   "label": "Technician Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "estimated_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Cost",
+   "precision": 2
+  },
+  {
+   "fieldname": "maintenance_cost",
+   "fieldtype": "Currency",
+   "label": "Maintenance Cost",
+   "precision": 2
+  },
+  {
+   "fieldname": "technician_notes",
+   "fieldtype": "Text",
+   "label": "Technician Notes"
+  },
+  {
+   "fieldname": "landlord_feedback",
+   "fieldtype": "Text",
+   "label": "Landlord Feedback"
+  },
+  {
+   "fieldname": "reschedule_reason",
+   "fieldtype": "Text",
+   "label": "Reschedule Reason"
+  },
+  {
+   "default": 1,
+   "fieldname": "check_technician_availability",
+   "fieldtype": "Check",
+   "label": "Check Technician Availability"
+  }
+ ],
+ "index_web_search_for": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Maintenance Schedule",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Landlord Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Coordinator",
+   "share": 0,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 0,
+   "email": 0,
+   "export": 0,
+   "print": 1,
+   "read": 1,
+   "report": 0,
+   "role": "Field Executive",
+   "share": 0,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
+} 

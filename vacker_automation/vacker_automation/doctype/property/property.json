@@ -1,0 +1,210 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PROP-.YYYY.-.#####",
+ "creation": "2024-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "property_id",
+  "property_name",
+  "property_type",
+  "property_category",
+  "property_size",
+  "property_status",
+  "full_address",
+  "column_break_ttgh",
+  "country",
+  "city",
+  "state_province",
+  "postal_code",
+  "latitude",
+  "longitude",
+  "accessibility_notes",
+  "compliance_status",
+  "calculated_value",
+  "market_value",
+  "last_valuation_date",
+  "mapping_data"
+ ],
+ "fields": [
+  {
+   "fieldname": "property_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Property Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_address",
+   "fieldtype": "Text Editor",
+   "label": "Full Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state_province",
+   "fieldtype": "Data",
+   "label": "State/Province",
+   "reqd": 1
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "default": "Uganda",
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country"
+  },
+  {
+   "fieldname": "latitude",
+   "fieldtype": "Float",
+   "label": "Latitude",
+   "precision": "6"
+  },
+  {
+   "fieldname": "longitude",
+   "fieldtype": "Float",
+   "label": "Longitude",
+   "precision": "6"
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Select",
+   "label": "Property Type",
+   "options": "Commercial\nResidential\nIndustrial\nRoadside\nOther"
+  },
+  {
+   "fieldname": "property_category",
+   "fieldtype": "Select",
+   "label": "Property Category",
+   "options": "Billboard\nDigital Display\nTransit\nStreet Furniture\nBuilding Wrap\nOther"
+  },
+  {
+   "description": "e.g., 14x48 feet",
+   "fieldname": "property_size",
+   "fieldtype": "Data",
+   "label": "Property Size"
+  },
+  {
+   "fieldname": "accessibility_notes",
+   "fieldtype": "Text",
+   "label": "Accessibility Notes"
+  },
+  {
+   "fieldname": "compliance_status",
+   "fieldtype": "Select",
+   "label": "Compliance Status",
+   "options": "Compliant\nNon-Compliant\nUnder Review\nPending Approval"
+  },
+  {
+   "fieldname": "calculated_value",
+   "fieldtype": "Currency",
+   "label": "Calculated Value",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "market_value",
+   "fieldtype": "Currency",
+   "label": "Market Value",
+   "precision": "2"
+  },
+  {
+   "fieldname": "last_valuation_date",
+   "fieldtype": "Date",
+   "label": "Last Valuation Date"
+  },
+  {
+   "fieldname": "mapping_data",
+   "fieldtype": "Code",
+   "label": "Mapping Data",
+   "read_only": 1,
+   "hidden": 1
+  },
+  {
+   "default": "Available",
+   "fieldname": "property_status",
+   "fieldtype": "Select",
+   "label": "Property Status",
+   "options": "Available\nOccupied\nUnder Maintenance\nDisputed"
+  },
+  {
+   "fieldname": "column_break_ttgh",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "links": [],
+ "modified": "2025-06-24 17:38:02.778651",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Property",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Landlord Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Coordinator",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Field Executive",
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "property_name",
+ "track_changes": 1,
+ "track_views": 1
+}

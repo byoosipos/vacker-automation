@@ -1,0 +1,229 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-26 21:01:26.835429",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_openrouter",
+  "enable_openrouter",
+  "openrouter_api_key",
+  "openrouter_model",
+  "openrouter_base_url",
+  "column_break_openrouter",
+  "openrouter_temperature",
+  "openrouter_max_tokens",
+  "openrouter_top_p",
+  "section_break_azure",
+  "enable_azure",
+  "azure_api_key",
+  "azure_endpoint",
+  "azure_deployment_name",
+  "column_break_azure",
+  "azure_api_version",
+  "azure_temperature",
+  "azure_max_tokens",
+  "section_break_general",
+  "default_ai_provider",
+  "ai_chat_history_limit",
+  "enable_data_summarization",
+  "column_break_general",
+  "enable_report_generation",
+  "system_prompt",
+  "data_privacy_mode"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_openrouter",
+   "fieldtype": "Section Break",
+   "label": "Open Router AI Settings"
+  },
+  {
+   "default": 0,
+   "fieldname": "enable_openrouter",
+   "fieldtype": "Check",
+   "label": "Enable Open Router AI"
+  },
+  {
+   "depends_on": "enable_openrouter",
+   "fieldname": "openrouter_api_key",
+   "fieldtype": "Password",
+   "label": "Open Router API Key",
+   "mandatory_depends_on": "enable_openrouter"
+  },
+  {
+   "default": "openai/gpt-4",
+   "depends_on": "enable_openrouter",
+   "fieldname": "openrouter_model",
+   "fieldtype": "Data",
+   "label": "Model",
+   "description": "e.g., openai/gpt-4, anthropic/claude-3-opus"
+  },
+  {
+   "default": "https://openrouter.ai/api/v1",
+   "depends_on": "enable_openrouter",
+   "fieldname": "openrouter_base_url",
+   "fieldtype": "Data",
+   "label": "Base URL"
+  },
+  {
+   "fieldname": "column_break_openrouter",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": 0.7,
+   "depends_on": "enable_openrouter",
+   "fieldname": "openrouter_temperature",
+   "fieldtype": "Float",
+   "label": "Temperature",
+   "precision": "2",
+   "description": "Controls randomness (0.0 to 2.0)"
+  },
+  {
+   "default": 2048,
+   "depends_on": "enable_openrouter",
+   "fieldname": "openrouter_max_tokens",
+   "fieldtype": "Int",
+   "label": "Max Tokens"
+  },
+  {
+   "default": 0.9,
+   "depends_on": "enable_openrouter",
+   "fieldname": "openrouter_top_p",
+   "fieldtype": "Float",
+   "label": "Top P",
+   "precision": "2",
+   "description": "Controls diversity (0.0 to 1.0)"
+  },
+  {
+   "fieldname": "section_break_azure",
+   "fieldtype": "Section Break",
+   "label": "Azure OpenAI Settings"
+  },
+  {
+   "default": 0,
+   "fieldname": "enable_azure",
+   "fieldtype": "Check",
+   "label": "Enable Azure OpenAI"
+  },
+  {
+   "depends_on": "enable_azure",
+   "fieldname": "azure_api_key",
+   "fieldtype": "Password",
+   "label": "Azure API Key",
+   "mandatory_depends_on": "enable_azure"
+  },
+  {
+   "depends_on": "enable_azure",
+   "fieldname": "azure_endpoint",
+   "fieldtype": "Data",
+   "label": "Azure Endpoint",
+   "mandatory_depends_on": "enable_azure",
+   "description": "e.g., https://your-resource.openai.azure.com/"
+  },
+  {
+   "depends_on": "enable_azure",
+   "fieldname": "azure_deployment_name",
+   "fieldtype": "Data",
+   "label": "Deployment Name",
+   "mandatory_depends_on": "enable_azure"
+  },
+  {
+   "fieldname": "column_break_azure",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "2024-02-15-preview",
+   "depends_on": "enable_azure",
+   "fieldname": "azure_api_version",
+   "fieldtype": "Data",
+   "label": "API Version"
+  },
+  {
+   "default": 0.7,
+   "depends_on": "enable_azure",
+   "fieldname": "azure_temperature",
+   "fieldtype": "Float",
+   "label": "Temperature",
+   "precision": "2"
+  },
+  {
+   "default": 2048,
+   "depends_on": "enable_azure",
+   "fieldname": "azure_max_tokens",
+   "fieldtype": "Int",
+   "label": "Max Tokens"
+  },
+  {
+   "fieldname": "section_break_general",
+   "fieldtype": "Section Break",
+   "label": "General AI Settings"
+  },
+  {
+   "default": "openrouter",
+   "fieldname": "default_ai_provider",
+   "fieldtype": "Select",
+   "label": "Default AI Provider",
+   "options": "openrouter\nazure"
+  },
+  {
+   "default": 50,
+   "fieldname": "ai_chat_history_limit",
+   "fieldtype": "Int",
+   "label": "Chat History Limit",
+   "description": "Number of messages to keep in chat history"
+  },
+  {
+   "default": 1,
+   "fieldname": "enable_data_summarization",
+   "fieldtype": "Check",
+   "label": "Enable Data Summarization"
+  },
+  {
+   "fieldname": "column_break_general",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": 1,
+   "fieldname": "enable_report_generation",
+   "fieldtype": "Check",
+   "label": "Enable Report Generation"
+  },
+  {
+   "default": "You are an intelligent business assistant for ERPNext. Help users analyze dashboard data, generate insights, and provide comprehensive reports. Always be concise, accurate, and business-focused.",
+   "fieldname": "system_prompt",
+   "fieldtype": "Text",
+   "label": "System Prompt"
+  },
+  {
+   "default": 0,
+   "fieldname": "data_privacy_mode",
+   "fieldtype": "Check",
+   "label": "Data Privacy Mode",
+   "description": "When enabled, sensitive data will be anonymized before sending to AI"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-05-26 21:01:26.835429",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "AI settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

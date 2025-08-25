@@ -1,0 +1,27 @@
+{
+ "creation": "2024-01-01 00:00:00.000000",
+ "doctype": "Page",
+ "engine": "InnoDB",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Landlord Management Dashboard",
+ "owner": "Administrator",
+ "page_name": "landlord_management_dashboard",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Landlord Manager"
+  },
+  {
+   "role": "Accounts Executive"
+  },
+  {
+   "role": "Property Coordinator"
+  }
+ ],
+ "script": "landlord_management_dashboard.js",
+ "style": "landlord_management_dashboard.css"
+} 

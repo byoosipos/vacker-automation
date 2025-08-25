@@ -1,0 +1,261 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "INST-.YYYY.-.#####",
+ "creation": "2024-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "installation_id",
+  "landlord",
+  "column_break_fjea",
+  "property",
+  "media_type",
+  "section_break_project",
+  "project",
+  "project_name",
+  "column_break_wnbr",
+  "customer",
+  "customer_name",
+  "section_break_rental",
+  "rental_start_date",
+  "rental_end_date",
+  "rental_amount",
+  "rental_frequency",
+  "rental_status",
+  "column_break_pcgg",
+  "installation_date",
+  "installation_status",
+  "installation_cost",
+  "maintenance_schedule",
+  "next_maintenance_date",
+  "section_break_rental_history",
+  "rental_history",
+  "section_break_customer_invoicing",
+  "customer_invoicing_schedules_info",
+  "installation_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "installation_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Installation ID",
+   "reqd": 1
+  },
+  {
+   "fieldname": "landlord",
+   "fieldtype": "Link",
+   "label": "Landlord",
+   "options": "Landlord",
+   "reqd": 1
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property",
+   "reqd": 1
+  },
+  {
+   "fieldname": "media_type",
+   "fieldtype": "Data",
+   "label": "Media Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_project",
+   "fieldtype": "Section Break",
+   "label": "Project & Customer Information"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_rental",
+   "fieldtype": "Section Break",
+   "label": "Rental Information"
+  },
+  {
+   "fieldname": "rental_start_date",
+   "fieldtype": "Date",
+   "label": "Rental Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_end_date",
+   "fieldtype": "Date",
+   "label": "Rental End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_amount",
+   "fieldtype": "Currency",
+   "label": "Rental Amount",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_frequency",
+   "fieldtype": "Select",
+   "label": "Rental Frequency",
+   "options": "Monthly\nQuarterly\nAnnually\nOne-time",
+   "reqd": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "rental_status",
+   "fieldtype": "Select",
+   "label": "Rental Status",
+   "options": "Active\nCompleted\nTerminated\nSuspended"
+  },
+  {
+   "fieldname": "column_break_pcgg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "installation_date",
+   "fieldtype": "Date",
+   "label": "Installation Date",
+   "reqd": 1
+  },
+  {
+   "default": "Planned",
+   "fieldname": "installation_status",
+   "fieldtype": "Select",
+   "label": "Installation Status",
+   "options": "Planned\nIn Progress\nCompleted\nMaintenance Required"
+  },
+  {
+   "fieldname": "installation_cost",
+   "fieldtype": "Currency",
+   "label": "Installation Cost",
+   "precision": "2"
+  },
+  {
+   "default": "Monthly",
+   "fieldname": "maintenance_schedule",
+   "fieldtype": "Select",
+   "label": "Maintenance Schedule",
+   "options": "Monthly\nQuarterly\nBi-annually\nAs Needed"
+  },
+  {
+   "fieldname": "next_maintenance_date",
+   "fieldtype": "Date",
+   "label": "Next Maintenance Date"
+  },
+  {
+   "fieldname": "section_break_rental_history",
+   "fieldtype": "Section Break",
+   "label": "Rental History"
+  },
+  {
+   "fieldname": "rental_history",
+   "fieldtype": "Table",
+   "label": "Rental History",
+   "options": "Media Installation Rental History"
+  },
+  {
+   "fieldname": "section_break_customer_invoicing",
+   "fieldtype": "Section Break",
+   "label": "Customer Invoicing Schedules"
+  },
+  {
+   "fieldname": "customer_invoicing_schedules_info",
+   "fieldtype": "HTML",
+   "label": "Customer Invoicing Schedules",
+   "read_only": 1
+  },
+  {
+   "fieldname": "installation_notes",
+   "fieldtype": "Text",
+   "label": "Installation Notes"
+  },
+  {
+   "fieldname": "column_break_fjea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wnbr",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "links": [],
+ "modified": "2025-06-24 17:39:36.892347",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Media Installation",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Landlord Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Property Coordinator",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Field Executive",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
+}

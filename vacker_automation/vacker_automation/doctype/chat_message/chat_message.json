@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2025-01-27 10:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "chat_session",
+  "user",
+  "column_break_3",
+  "message_type",
+  "timestamp",
+  "section_break_6",
+  "content",
+  "section_break_8",
+  "thinking_mode",
+  "thinking_content",
+  "column_break_11",
+  "web_search_enabled",
+  "attachments",
+  "section_break_14",
+  "tokens_used",
+  "response_time",
+  "column_break_17",
+  "ai_model",
+  "temperature",
+  "section_break_20",
+  "metadata"
+ ],
+ "fields": [
+  {
+   "fieldname": "chat_session",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Chat Session",
+   "options": "Chat Session",
+   "reqd": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "message_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Message Type",
+   "options": "User\nAI\nSystem",
+   "reqd": 1
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Long Text",
+   "label": "Message Content",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "AI Features"
+  },
+  {
+   "fieldname": "thinking_mode",
+   "fieldtype": "Check",
+   "label": "Thinking Mode Enabled"
+  },
+  {
+   "fieldname": "thinking_content",
+   "fieldtype": "Long Text",
+   "label": "AI Thinking Process"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "web_search_enabled",
+   "fieldtype": "Check",
+   "label": "Web Search Enabled"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "JSON",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "AI Metrics"
+  },
+  {
+   "fieldname": "tokens_used",
+   "fieldtype": "Int",
+   "label": "Tokens Used"
+  },
+  {
+   "fieldname": "response_time",
+   "fieldtype": "Float",
+   "label": "Response Time (seconds)"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ai_model",
+   "fieldtype": "Data",
+   "label": "AI Model Used"
+  },
+  {
+   "fieldname": "temperature",
+   "fieldtype": "Float",
+   "label": "Temperature"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "metadata",
+   "fieldtype": "JSON",
+   "label": "Message Metadata"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2025-01-27 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Chat Message",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+} 

@@ -1,0 +1,13 @@
+# Patches for Vacker Automation - Landlord Management System
+
+# Patch 1: Create Outdoor Advertising module
+# - Adds new module for landlord management functionality
+# - Creates all required DocTypes and pages
+
+# Patch 2: Initialize landlord management tables
+# - Creates Property, Landlord, Media Installation tables
+# - Sets up payment and maintenance tracking
+
+# Patch 3: Configure permissions and roles
+# - Sets up role-based access control
+# - Configures user permissions for different roles 

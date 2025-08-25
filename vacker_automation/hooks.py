@@ -1,9 +1,9 @@
 app_name = "vacker_automation"
 app_title = "Vacker Automation"
-app_publisher = "info@byoosi.com"
-app_description = "Automating Vacker Company Limited"
-app_email = "info@byoosi.com"
-app_license = "mit"
+app_publisher = "Vacker"
+app_description = "Vacker Automation and Customizations"
+app_email = "info@vacker.com"
+app_license = "MIT"
 # required_apps = []
 
 # Includes in <head>
@@ -11,7 +11,9 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/vacker_automation/css/vacker_automation.css"
-# app_include_js = "/assets/vacker_automation/js/vacker_automation.js"
+app_include_js = [
+    "/assets/vacker_automation/js/ai_dashboard_enhancements.js"
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/vacker_automation/css/vacker_automation.css"
@@ -25,7 +27,25 @@ app_license = "mit"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+# Note: These files are located in public/page/comprehensive_executive_dashboard/modules/
+# and are loaded automatically when the comprehensive-executive-dashboard page is accessed
+page_js = {
+    "comprehensive-executive-dashboard": [
+        "page/comprehensive_executive_dashboard/modules/styles-module.js",
+        "page/comprehensive_executive_dashboard/modules/ai-chat-module.js",
+        "page/comprehensive_executive_dashboard/modules/dashboard-core.js",
+        "page/comprehensive_executive_dashboard/modules/overview-module.js",
+        "page/comprehensive_executive_dashboard/modules/financial-module.js",
+        "page/comprehensive_executive_dashboard/modules/chart-utils.js",
+        "page/comprehensive_executive_dashboard/modules/operations-module.js",
+        "page/comprehensive_executive_dashboard/modules/purchase-orders-module.js",
+        "page/comprehensive_executive_dashboard/modules/bank-cash-module.js",
+        "page/comprehensive_executive_dashboard/modules/hr-module.js",
+        "page/comprehensive_executive_dashboard/modules/materials-module.js",
+        "page/comprehensive_executive_dashboard/modules/projects-module.js",
+        "page/comprehensive_executive_dashboard/modules/sales-module.js"
+    ]
+}
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
@@ -67,8 +87,8 @@ app_license = "mit"
 # Installation
 # ------------
 
-# before_install = "vacker_automation.install.before_install"
-# after_install = "vacker_automation.install.after_install"
+before_install = "vacker_automation.install.before_install"
+after_install = "vacker_automation.install.after_install"
 
 # Uninstallation
 # ------------
@@ -122,13 +142,17 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    # AI Risk Assessment Hooks for all enabled doctypes
+    "*": {
+        "before_insert": "vacker_automation.vacker_automation.doctype.ai_risk_manager.hooks_configuration.ai_before_insert",
+        "validate": "vacker_automation.vacker_automation.doctype.ai_risk_manager.hooks_configuration.ai_validate",
+        "before_save": "vacker_automation.vacker_automation.doctype.ai_risk_manager.hooks_configuration.ai_before_save",
+        "after_insert": "vacker_automation.vacker_automation.doctype.ai_risk_manager.hooks_configuration.ai_after_insert",
+        "on_submit": "vacker_automation.vacker_automation.doctype.ai_risk_manager.hooks_configuration.ai_on_submit",
+        "on_cancel": "vacker_automation.vacker_automation.doctype.ai_risk_manager.hooks_configuration.ai_on_cancel"
+    }
+}
 
 # Scheduled Tasks
 # ---------------
@@ -215,9 +239,9 @@ app_license = "mit"
 
 # Authentication and authorization
 # --------------------------------
+# Minimal fixtures for pages only (avoid custom field conflicts)
 fixtures = [
-    {"dt": "Client Script", "filters": [["module", "=", "Vacker Automation"]]},
-    {"dt": "Custom Field", "filters": [["module", "=", "Vacker Automation"]]}
+    {"dt": "Page", "filters": [["module", "=", "Vacker Automation"]]},
 ]
 # auth_hooks = [
 # 	"vacker_automation.auth.validate"
@@ -230,3 +254,42 @@ fixtures = [
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# Hooks for Vacker Automation
+
+# Auto-update payment schedules when purchase invoices are paid
+on_update_after_submit = [
+    "vacker_automation.vacker_automation.hooks.update_payment_schedule_on_invoice_payment"
+]
+
+# Update payment schedules when invoices are paid
+def update_payment_schedule_on_invoice_payment(doc, method):
+    """Update payment schedule when purchase invoice is paid"""
+    if doc.doctype == "Purchase Invoice" and doc.status == "Paid":
+        try:
+            # Check if this invoice is linked to a payment schedule
+            if hasattr(doc, 'landlord_payment_schedule') and doc.landlord_payment_schedule:
+                payment_schedule = frappe.get_doc("Landlord Payment Schedule", doc.landlord_payment_schedule)
+                payment_schedule.update_payment_status_from_invoice()
+                frappe.msgprint(f"Payment schedule {payment_schedule.name} updated with payment details")
+        except Exception as e:
+            frappe.log_error(f"Error updating payment schedule for invoice {doc.name}: {str(e)}")
+
+# In vacker_automation/hooks.py
+
+override_whitelisted_methods = {
+    # ... other overrides
+}
+
+# Add this line to expose your endpoint
+doc_events = {
+    # ... other doc events
+}
+
+# Add this line to expose your endpoint
+app_include_js = []
+app_include_css = []
+
+# Add this to expose the endpoint
+override_whitelisted_methods.update({
+    "vacker_automation.mobile_app_api.project_dashboard.get_project_dashboard": "vacker_automation.mobile_app_api.project_dashboard.get_project_dashboard"
+})

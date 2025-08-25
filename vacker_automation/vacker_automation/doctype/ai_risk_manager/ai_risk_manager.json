@@ -1,0 +1,200 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-01-27 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "risk_assessment_name",
+  "company",
+  "column_break_4",
+  "assessment_date",
+  "status",
+  "risk_level",
+  "section_break_8",
+  "risk_categories",
+  "financial_metrics",
+  "column_break_11",
+  "cash_flow_analysis",
+  "compliance_status",
+  "section_break_14",
+  "risk_findings",
+  "ai_recommendations",
+  "column_break_17",
+  "mitigation_actions",
+  "follow_up_date",
+  "section_break_20",
+  "assessment_data",
+  "ai_analysis_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "RISK-ASSESS-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_assessment_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Risk Assessment Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "assessment_date",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Assessment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nResolved\nMonitoring\nCritical",
+   "default": "Active"
+  },
+  {
+   "fieldname": "risk_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Risk Level",
+   "options": "Low\nMedium\nHigh\nCritical",
+   "default": "Medium"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Risk Analysis"
+  },
+  {
+   "fieldname": "risk_categories",
+   "fieldtype": "JSON",
+   "label": "Risk Categories"
+  },
+  {
+   "fieldname": "financial_metrics",
+   "fieldtype": "JSON",
+   "label": "Financial Metrics"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cash_flow_analysis",
+   "fieldtype": "JSON",
+   "label": "Cash Flow Analysis"
+  },
+  {
+   "fieldname": "compliance_status",
+   "fieldtype": "JSON",
+   "label": "Compliance Status"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break",
+   "label": "AI Assessment"
+  },
+  {
+   "fieldname": "risk_findings",
+   "fieldtype": "Long Text",
+   "label": "Risk Findings"
+  },
+  {
+   "fieldname": "ai_recommendations",
+   "fieldtype": "Long Text",
+   "label": "AI Recommendations"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mitigation_actions",
+   "fieldtype": "Long Text",
+   "label": "Mitigation Actions"
+  },
+  {
+   "fieldname": "follow_up_date",
+   "fieldtype": "Date",
+   "label": "Follow-up Date"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "assessment_data",
+   "fieldtype": "JSON",
+   "label": "Assessment Data"
+  },
+  {
+   "fieldname": "ai_analysis_log",
+   "fieldtype": "JSON",
+   "label": "AI Analysis Log"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2025-01-27 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "AI Risk Manager",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Accounts User",
+   "share": 1
+  }
+ ],
+ "quick_entry": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+} 

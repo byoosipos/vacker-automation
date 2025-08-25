@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-06-18 00:00:00",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "customer_name",
+  "rental_start_date",
+  "rental_end_date",
+  "rental_amount",
+  "rental_frequency",
+  "rental_status",
+  "total_revenue",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "rental_start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Rental Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_end_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Rental End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Rental Amount",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "rental_frequency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Rental Frequency",
+   "options": "Monthly\nQuarterly\nAnnually\nOne-time"
+  },
+  {
+   "fieldname": "rental_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Rental Status",
+   "options": "Active\nCompleted\nTerminated\nSuspended"
+  },
+  {
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Revenue",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2025-06-18 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Media Installation Rental History",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_views": 1
+} 

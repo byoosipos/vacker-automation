@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-11-11 01:54:01.205291",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_aqgp",
+  "date",
+  "recipient_name",
+  "naming_series",
+  "column_break_wwgo",
+  "delivery_note_number",
+  "lpo_reference_number",
+  "section_break_jurg",
+  "particulars",
+  "section_break_jexe",
+  "delivered_by",
+  "column_break_ykyo",
+  "received_by",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_aqgp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Customer Delivery Note",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "particulars",
+   "fieldtype": "Table",
+   "label": "Particulars",
+   "options": "Delivery Orders Items"
+  },
+  {
+   "fieldname": "recipient_name",
+   "fieldtype": "Link",
+   "label": "Recipient Name",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "delivery_note_number",
+   "fieldtype": "Data",
+   "label": "Delivery Note Number"
+  },
+  {
+   "fieldname": "lpo_reference_number",
+   "fieldtype": "Data",
+   "label": "L.P.O Reference Number"
+  },
+  {
+   "fieldname": "delivered_by",
+   "fieldtype": "Data",
+   "label": "Delivered By"
+  },
+  {
+   "fieldname": "received_by",
+   "fieldtype": "Data",
+   "label": "Received By"
+  },
+  {
+   "fieldname": "column_break_wwgo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jurg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_jexe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_ykyo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "VCL/DN.-",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Naming Series",
+   "options": "VCL/DN.-"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-01-29 14:46:44.910574",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Customer Delivery Note",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
