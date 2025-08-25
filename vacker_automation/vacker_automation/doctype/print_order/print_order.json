@@ -1,0 +1,247 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format: PRO{MM}{DD}{YYYY}{#####}",
+ "creation": "2025-07-23 12:33:47.505614",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "client_name",
+  "customer",
+  "sales_order",
+  "lpo_no",
+  "column_break_hpur",
+  "date",
+  "account_holder",
+  "project_details",
+  "total_sqmts",
+  "section_break_yzsh",
+  "job_details_table",
+  "attachments_table",
+  "ack_section",
+  "production_manager",
+  "column_break_jwqd",
+  "finance_manager",
+  "approval_section",
+  "sales_marketing",
+  "column_break_thya",
+  "managing_director",
+  "remarks_section",
+  "remarks_production",
+  "remarks_delivery",
+  "column_break_cpwa",
+  "remarks_finance",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "client_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client Name / Project Details",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Sales Order",
+   "options": "Sales Order"
+  },
+  {
+   "fieldname": "account_holder",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account Holder",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lpo_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "LPO No.",
+   "reqd": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_details",
+   "fieldtype": "Data",
+   "label": "Project Details"
+  },
+  {
+   "columns": 8,
+   "fieldname": "job_details_table",
+   "fieldtype": "Table",
+   "label": "Job Details",
+   "options": "Print Order Job Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachments_table",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Print Order Attachment",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "total_sqmts",
+   "fieldtype": "Float",
+   "label": "Total SQMTS",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ack_section",
+   "fieldtype": "Section Break",
+   "label": "Acknowledged/Reviewed By"
+  },
+  {
+   "fieldname": "production_manager",
+   "fieldtype": "Link",
+   "label": "Production Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "finance_manager",
+   "fieldtype": "Link",
+   "label": "Finance Manager",
+   "options": "User"
+  },
+  {
+   "fieldname": "approval_section",
+   "fieldtype": "Section Break",
+   "label": "Approved By"
+  },
+  {
+   "fieldname": "sales_marketing",
+   "fieldtype": "Link",
+   "label": "Sales & Marketing",
+   "options": "User"
+  },
+  {
+   "fieldname": "managing_director",
+   "fieldtype": "Link",
+   "label": "Managing Director",
+   "options": "User"
+  },
+  {
+   "fieldname": "remarks_section",
+   "fieldtype": "Section Break",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "remarks_production",
+   "fieldtype": "Small Text",
+   "label": "To Production/Operator"
+  },
+  {
+   "fieldname": "remarks_finance",
+   "fieldtype": "Small Text",
+   "label": "Finance/GM Comments"
+  },
+  {
+   "fieldname": "remarks_delivery",
+   "fieldtype": "Small Text",
+   "label": "Delivery Details"
+  },
+  {
+   "fieldname": "column_break_hpur",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_yzsh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_jwqd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_thya",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_cpwa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Print Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-07-23 14:09:27.168687",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Print Order",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

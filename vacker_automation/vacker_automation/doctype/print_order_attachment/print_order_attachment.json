@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "creation": "2025-07-23 13:31:32.101567",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "attachment_name",
+  "attachment_file"
+ ],
+ "fields": [
+  {
+   "fieldname": "attachment_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Attachment Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachment_file",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attachment File",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2025-07-23 13:34:39.588543",
+ "modified_by": "Administrator",
+ "module": "Vacker Automation",
+ "name": "Print Order Attachment",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
